@@ -9,7 +9,7 @@ main =
     Browser.sandbox { init = 0, update = update, view = view }
 
 {-
-Exercise sis/pse
+Exercise
 Currently our counter only increments and decrements by one unit:
 - Add a RESET button that will set the model's value to zero (0)
 -}
