@@ -9,14 +9,13 @@ main =
     Browser.sandbox { init = 0, update = update, view = view }
 
 {-
-Exercise sis/pse
+Exercise
 Currently our counter only increments and decrements by one unit:
 - Add a RESET button that will set the model's value to zero (0)
 -}
 type Msg
     = Increment
     | Decrement
-    | Reset
 
 {- What does it all means????
 In this case, we are speaking about a function (update), which takes:
@@ -34,9 +33,6 @@ update msg model =
         Decrement ->
             model - 1 -- Substact one unit
 
-        Reset ->
-            0 -- Reset counter to zero (0)
-
 
 view model =
     div []
@@ -44,5 +40,4 @@ view model =
         , div [] [ text (String.fromInt model) ]
         , button [ onClick Increment ] [ text "+" ]
         , br [] []
-        , button [ onClick Reset ] [ text "R" ]
         ]
